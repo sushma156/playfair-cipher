@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Playfair Cipher | V Sanjay</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="header">
+            <h1>PLAYFAIR</h1>
+            <p>CIPHER ENCRYPTION TOOL</p>
+        </div>
+
+        <div class="box">
+
+            <label>Keyword</label>
+
+            <input
+                type="text"
+                id="keyword"
+                placeholder="Enter keyword"
+                oninput="generateMatrix()"
+            >
+
+
+            <label>Key Matrix</label>
+
+            <div id="matrix" class="matrix">
+                <span>Enter a keyword</span>
+            </div>
+
+
+            <label>Enter Text</label>
+
+            <textarea
+                id="inputText"
+                placeholder="Enter text here..."
+            ></textarea>
+
+
+            <div class="buttons">
+
+                <button onclick="encryptText()">
+                    ENCRYPT
+                </button>
+
+                <button onclick="decryptText()">
+                    DECRYPT
+                </button>
+
+            </div>
+
+
+            <label>Result</label>
+
+            <textarea
+                id="result"
+                readonly
+                placeholder="Result appears here..."
+            ></textarea>
+
+
+            <p id="message"></p>
+
+
+            <button
+                class="clear"
+                onclick="clearAll()"
+            >
+                CLEAR
+            </button>
+
+        </div>
+
+        <footer>
+            CNS Project · Developed by <strong>V Sanjay</strong>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

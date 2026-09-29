@@ -1,0 +1,414 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6a11cb,
+            #2575fc,
+            #00c9a7
+        );
+
+    min-height: 100vh;
+
+    color: #252525;
+}
+
+
+/* PAGE */
+
+.page {
+    width: 100%;
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 35px 20px;
+}
+
+
+/* HEADER */
+
+.header {
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 45px;
+
+    letter-spacing: 7px;
+
+    text-shadow:
+        0 4px 10px rgba(0,0,0,0.25);
+}
+
+.header p {
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: #e0f2ff;
+}
+
+
+/* MAIN BOX */
+
+.box {
+
+    background: rgba(255,255,255,0.96);
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.25);
+
+}
+
+
+/* LABEL */
+
+label {
+
+    display: block;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #5b21b6;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* INPUTS */
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+input:focus,
+textarea:focus {
+
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 4px rgba(124,58,237,0.12);
+
+}
+
+
+textarea {
+
+    height: 120px;
+
+    resize: vertical;
+
+}
+
+
+/* MATRIX */
+
+.matrix {
+
+    width: fit-content;
+
+    margin: 18px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 52px);
+
+    gap: 5px;
+
+}
+
+
+.matrix-cell {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6b6b,
+            #ff9f43
+        );
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 8px rgba(0,0,0,0.15);
+
+}
+
+
+.matrix span {
+
+    grid-column: 1 / 6;
+
+    padding: 15px;
+
+    color: #888;
+
+    text-align: center;
+
+}
+
+
+/* BUTTONS */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+}
+
+
+button {
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 15px rgba(0,0,0,0.2);
+
+}
+
+
+/* ENCRYPT */
+
+.buttons button:first-child {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff416c,
+            #ff4b2b
+        );
+
+}
+
+
+/* DECRYPT */
+
+.buttons button:nth-child(2) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #00b09b,
+            #96c93d
+        );
+
+}
+
+
+/* CLEAR */
+
+.clear {
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+
+}
+
+
+/* MESSAGE */
+
+#message {
+
+    min-height: 20px;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: white;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+footer strong {
+
+    color: #fff700;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .page {
+
+        padding: 25px 12px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 34px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .header p {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .box {
+
+        padding: 22px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .buttons {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .matrix {
+
+        grid-template-columns:
+            repeat(5, 43px);
+
+        gap: 4px;
+
+    }
+
+
+    .matrix-cell {
+
+        width: 43px;
+
+        height: 43px;
+
+        font-size: 17px;
+
+    }
+
+}
